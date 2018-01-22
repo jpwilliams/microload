@@ -1,0 +1,14 @@
+{
+  "name": "microload",
+  "version": "0.0.0",
+  "description": "Load a path as an object.",
+  "main": "index.js",
+  "repository": "https://github.com/jpwilliams/microload",
+  "author": "Jack Williams",
+  "license": "MIT",
+  "dependencies": {
+    "callsites": "^2.0.0",
+    "glob": "^7.1.2",
+    "lodash": "^4.17.4"
+  }
+}
