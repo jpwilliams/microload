@@ -44,6 +44,7 @@ function microload (path, opts = {}) {
 function lookup (path, cwd) {
   const files = []
   let absolutePath = resolve(cwd, path)
+  if (basename(absolutePath)[0] === '.') return []
 
   const stats = statSync(absolutePath, constants.R_OK)
 
@@ -54,7 +55,7 @@ function lookup (path, cwd) {
       const foundFiles = glob.sync(absolutePath)
 
       files.push(...foundFiles.filter((file) => {
-        return re.test(file)
+        return re.test(file) && basename(file)[0] !== '.'
       }))
 
       return files
@@ -81,7 +82,11 @@ function lookup (path, cwd) {
       continue
     }
 
-    if (!fileStats.isFile() || !re.test(resolvedFile)) {
+    if (
+      !fileStats.isFile() ||
+      !re.test(resolvedFile) ||
+      basename(resolvedFile)[0] === '.'
+    ) {
       continue
     }
 
