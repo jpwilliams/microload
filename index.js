@@ -7,6 +7,9 @@ const callsites = require('callsites')
 const glob = require('glob')
 const { set } = require('lodash')
 
+// setup
+const re = new RegExp('^[^\\.].*\\.js(on)?$')
+
 function getCallingDir () {
   return dirname(callsites()[2].getFileName())
 }
@@ -39,8 +42,6 @@ function microload (path, opts = {}) {
 }
 
 function lookup (path, cwd) {
-  const re = new RegExp('^[^\\.].*\\.js(on)?$')
-
   const files = []
   let absolutePath = resolve(cwd, path)
 
