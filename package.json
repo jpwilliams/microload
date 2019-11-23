@@ -1,5 +1,5 @@
 {
-  "name": "microload",
+  "name": "@jpwilliams/microload",
   "version": "0.0.1",
   "description": "Load a path as an object.",
   "main": "index.js",
