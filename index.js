@@ -114,7 +114,7 @@ function lookup (path, cwd, re) {
 		const fileStats = statSync(resolvedFile)
 
 		if (fileStats.isDirectory()) {
-			files.push(...lookup(resolvedFile))
+			files.push(...lookup(resolvedFile, null, re))
 
 			continue
 		}
