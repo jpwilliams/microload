@@ -1,6 +1,6 @@
 {
   "name": "@jpwilliams/microload",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Load a path as an object.",
   "main": "index.js",
   "repository": "https://github.com/jpwilliams/microload",
