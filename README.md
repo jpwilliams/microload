@@ -1,5 +1,7 @@
 # microload
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jpwilliams/microload.svg)](https://greenkeeper.io/)
+
 A simplified version of [`microboot`](https://github.com/jpwilliams/microboot) and [`microloader`](https://github.com/jpwilliams/microloader) that synchronously loads a given path as an object.
 
 # Key features
