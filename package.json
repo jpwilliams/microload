@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "callsites": "^2.0.0",
-    "glob": "^7.1.2",
+    "glob": "^8.0.1",
     "lodash": "^4.17.4"
   }
 }
